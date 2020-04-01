@@ -102,7 +102,7 @@ function encrypte8(s, n){
                         result[i]=tab[j+n];
                      }
                     else{
-                    let k=Math.trunc((n+j)/25)-1;
+                    let k=Math.trunc((n+j)/25)+1;
                     result[i]=tab[k];
             }
          }
@@ -119,7 +119,7 @@ function encrypte8(s, n){
                     result[i]=tab[j+n];
             }
             else{
-                let k=Math.trunc((n+j)/26)-1;
+                let k=Math.trunc((n+j)/26)+1;
                  result[i]=tab[k];
             }
         }
@@ -211,7 +211,7 @@ function encrypte9(s, n){
                         result[i]=tab[j+k];
                     }
                     else{
-                        let h=Math.trunc((n+j)/25)-1;
+                        let h=Math.trunc((n+j)/25)+1;
                          result[i]=tab[h];
                     }
                 tour=-1;
@@ -230,7 +230,7 @@ function encrypte9(s, n){
                            result[i]=tab[j+k];
                         }
                         else{
-                            let h=Math.trunc((n+j)/25)-1;
+                            let h=Math.trunc((n+j)/25)+1;
                             result[i]=tab[h];
                          }
                     }
@@ -248,7 +248,7 @@ function encrypte9(s, n){
                            result[i]=tab[j+k];
                         }
                     else{
-                        let h=Math.trunc((n+j)/25)-1;
+                        let h=Math.trunc((n+j)/25)+1;
                         result[i]=tab[h];
                          }
                  }
@@ -269,7 +269,7 @@ function encrypte9(s, n){
                     result[i]=tabmin[j+k];
                     }
                 else{
-                    let h=Math.trunc((n+j)/25)-1;
+                    let h=Math.trunc((n+j)/25)+1;
                     result[i]=tabmin[h];
                     }
                 tour=-1;
@@ -288,7 +288,7 @@ function encrypte9(s, n){
                        result[i]=tabmin[j+k];
                     }
                     else{
-                        let h=Math.trunc((n+j)/25)-1;
+                        let h=Math.trunc((n+j)/25)+1;
                         result[i]=tabmin[h];
                     }
                 }
@@ -306,7 +306,7 @@ function encrypte9(s, n){
                        result[i]=tabmin[j+k];
                     }
                 else{
-                   let h=Math.trunc((n+j)/25)-1;
+                   let h=Math.trunc((n+j)/25)+1;
                    result[i]=tabmin[h];
                     }
                 }   
@@ -403,7 +403,7 @@ function decrypte9(s, n){
                 while(tab2[i] !=tabmin[j]){
                     j++
                    }
-                if(j-k <=25){
+                if(j-k >=0){
                     result[i]=tabmin[j-k];
                             }
                 else{
@@ -422,7 +422,7 @@ function decrypte9(s, n){
                     while(tab2[i] !=tabmin[j]){
                         j++
                     }
-                    if(j-k <=25){
+                    if(j-k >=0){
                        result[i]=tabmin[j-k];
                     }
                     else{
@@ -440,7 +440,7 @@ function decrypte9(s, n){
                 while(tab2[i] !=tabmin[j]){
                     j++
                    }
-                if(j-k <=25){
+                if(j-k >=0){
                     result[i]=tabmin[j-k];
                     }
                 else{
