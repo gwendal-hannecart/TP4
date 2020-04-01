@@ -18,5 +18,4 @@ function repeatTest(){
     console.log(encrypte9("BONJOUR",314));
     console.log(encrypte9("BONJOUR",314));
     console.log(decrypte9("EPRMPYU",314));
-    //console.log(decrypte9("p",314));
 }
