@@ -190,11 +190,60 @@ function encrypte9(s, n){
     var result=[0];
     var tab2=[0];
     let j=0;
-    let clef=determineclef(n);
+    let n1=""+n;
+    let clef=n1.split("");
+    let tour=0;
+    let k;
+    for(let i=0;i <s.length;i++){
+        tab2[i]=s[i];;
+    }
+    for(i=0;i<s.length;i++){          
+        if(tab2[i]>="A" && tab2[i]<="Z"){ 
+            if(tour=0){
+            k=parseInt(n1[tour]);
+            if(tab2[i]===" "){
+                result[i]=" ";
+            }
+            else{
+                while(tab2[i] !=tab[j]){
+                j++
+                }
+                if(j-n >=0){
+                    result[i]=tab[j-n];
+                }
+                else{
+                    let k=26-j;
+                    result[i]=tab[k];
+           }
+        }
+    }
+    }
+    else{
+        if(tab2[i]===" "){
+            result[i]=" ";
+        }
+        else{
+            while(tab2[i] !=tabmin[j]){
+                j++
+            }
+            if(j-n >=0){
+                result[i]=tabmin[j-n];
+            }
+            else{
+                let k=26-j;
+                result[i]=tabmin[k];
+            }
+        }
+    }
+    j=0;
+ }
+        let result2=result.join("");
+        return result2;
     
     
-
 }
+
+
 function determineclef(n){
     if(Math.trunc(n>=10)){
        return 1+determineclef(Math.trunc((n/10)));
