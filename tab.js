@@ -336,103 +336,98 @@ function decrypte9(s, n){
     }
     for(i=0;i<s.length;i++){          
         if(tab2[i]>="A" && tab2[i]<="Z"){
-        if(tour===2){
-           if(tab2[i]===" "){
+            if(tour===2){
+                if(tab2[i]===" "){
                 result[i]=" ";
-        }
-        else{
-            k=parseInt(n1[tour]);
-            while(tab2[i] !=tab[j]){
-                j++
-                }
+            }
+            else{
+                k=parseInt(n1[tour]);
+                while(tab2[i] !=tab[j]){
+                    j++
+                    }
                 if(j-k >=0){
                     result[i]=tab[j-k];
                 }
                 else{
                     let h=25-j;
                     result[i]=tab[h]
-                
-            }   
-        }  
+                }   
+            }  
         tour=-1;
         }
-            if(tour===1){
-           
-             if(tab2[i]===" "){
+        if(tour===1){
+           if(tab2[i]===" "){
                     result[i]=" ";
             }
             else{
-                      k=parseInt(n1[tour]);
-                      while(tab2[i] !=tab[j]){
-                        j++
-                        }
-                        if(j-k >=0){
-                            result[i]=tab[j-k];
-                        }
-                        else{
-                            let h=25-j;
-                            result[i]=tab[h]
-                         
-                    }   
-             
-        }
-    }
+                k=parseInt(n1[tour]);
+                while(tab2[i] !=tab[j]){
+                j++
+                }
+                if(j-k >=0){
+                    result[i]=tab[j-k];
+                            }
+                else{
+                    let h=25-j;
+                    result[i]=tab[h]
+                    }
+                }
+            }
             if(tour===0){
                 k=parseInt(n1[tour]);
-                 if(tab2[i]===" "){
-                        result[i]=" ";
+                if(tab2[i]===" "){
+                    result[i]=" ";
                 }
                 else{
                     while(tab2[i] !=tab[j]){
                         j++
                         }
-                        if(j-k >=0){
-                            result[i]=tab[j-k];
+                    if(j-k >=0){
+                        result[i]=tab[j-k];
                         }
-                        else{
-                            let h=25-j;
-                            result[i]=tab[h]
-                    }   
-                 }
-                 
-            }
+                    else{
+                        let h=25-j;
+                        result[i]=tab[h]
+                        }   
+                    }
+                }
         tour++;
-         }
+        }
     else{
-            if(tour===2){
-                if(tab2[i]===" "){
-                    result[i]=" ";
+        if(tour===2){
+            if(tab2[i]===" "){
+                result[i]=" ";
             }
             else{
                 k=parseInt(n1[tour]);
                 while(tab2[i] !=tabmin[j]){
                     j++
                    }
-                    if(j-k <=25){
-                       result[i]=tabmin[j-k];
-                    }
-                   else{
-                    let h=25-j;
+                if(j-k <=25){
+                    result[i]=tabmin[j-k];
+                            }
+                else{
+                   let h=25-j;
                    result[i]=tabmin[h];
-                     }
-                     tour=-1;
-             }
+                   }
+             tour=-1;
+                 }
             }
             if(tour===1){
                 if(tab2[i]===" "){
                     result[i]=" ";
-            }
-            else{
-                k=parseInt(n1[tour]);
-                while(tab2[i] !=tabmin[j]){
-                    j++
-                   }
+                    }
+                else{
+                    k=parseInt(n1[tour]);
+                    while(tab2[i] !=tabmin[j]){
+                        j++
+                    }
                     if(j-k <=25){
                        result[i]=tabmin[j-k];
                     }
-                   else{
-                    let h=25-j;
-                   result[i]=tabmin[h];
+                    else{
+                        let h=25-j;
+                        result[i]=tabmin[h];
                      }
                }
             }
@@ -445,23 +440,22 @@ function decrypte9(s, n){
                 while(tab2[i] !=tabmin[j]){
                     j++
                    }
-                    if(j-k <=25){
-                       result[i]=tabmin[j-k];
+                if(j-k <=25){
+                    result[i]=tabmin[j-k];
                     }
-                   else{
+                else{
                     let h=25-j;
-                   result[i]=tabmin[h];
+                    result[i]=tabmin[h];
                      }
                }
-                
             }
-            tour++;
-              }   
+        tour++;
+        }   
         j=0; 
-        }
-    let result2=result.join("");
-        return result2; 
     }
+    let result2=result.join("");
+    return result2; 
+}
        
     
     
