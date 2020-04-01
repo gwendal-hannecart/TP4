@@ -16,5 +16,5 @@ function repeatTest(){
     console.log((encrypte8("bonjour lol",5)));
    console.log(decrypte8(encrypte8("bonjour lol",5),5))
     console.log(determineclef(214));
-    console.log(encrypte9("BONJOUR",314))
+    console.log(encrypte9("BONJOUR lol",314))
 }

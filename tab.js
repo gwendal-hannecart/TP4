@@ -199,59 +199,125 @@ function encrypte9(s, n){
     }
     for(i=0;i<s.length;i++){          
         if(tab2[i]>="A" && tab2[i]<="Z"){ 
-            if(tour=0){
-            k=parseInt(n1[tour]);
-            if(tab2[i]===" "){
-                result[i]=" ";
-            }
-            else{
-                while(tab2[i] !=tab[j]){
-                j++
-                }
-                if(j-n >=0){
-                    result[i]=tab[j-n];
+            if(tour===0){
+                k=parseInt(n1[tour]);
+                 if(tab2[i]===" "){
+                        result[i]=" ";
                 }
                 else{
-                    let k=26-j;
-                    result[i]=tab[k];
-           }
+                    while(tab2[i] !=tab[j]){
+                        j++
+                       }
+                        if(j+k <=25){
+                           result[i]=tab[j+k];
+                        }
+                       else{
+                       let h=Math.trunc((k+i)/26)+1;
+                       result[i]=tab[h];
+                         }
+                 }
+                 tour=tour++;
+            }
+        
+        if(tour===1){
+            k=parseInt(n1[tour]);
+             if(tab2[i]===" "){
+                    result[i]=" ";
+            }
+            else{
+                if(tour=0){
+                    while(tab2[i] !=tab[j]){
+                        j++
+                       }
+                        if(j+k <=25){
+                           result[i]=tab[j+k];
+                        }
+                       else{
+                       let h=Math.trunc((k+i)/26)+1;
+                       result[i]=tab[h];
+                         }
+             tour++;
         }
     }
+    if(tour===2){
+        k=parseInt(n1[tour]);
+         if(tab2[i]===" "){
+                result[i]=" ";
+        }
+        else{
+            while(tab2[i] !=tab[j]){
+                j++
+               }
+                if(j+k <=25){
+                   result[i]=tab[j+k];
+                }
+               else{
+               let h=Math.trunc((k+i)/26)+1;
+               result[i]=tab[h];
+                 }
+                 tour=0;
+            }   
+        }
     }
+}
     else{
+
         if(tab2[i]===" "){
             result[i]=" ";
         }
         else{
-            while(tab2[i] !=tabmin[j]){
-                j++
+            if(tour===0){
+                while(tab2[i] !=tabmin[j]){
+                    j++
+                   }
+                    if(j+k <=25){
+                       result[i]=tabmin[j+k];
+                    }
+                   else{
+                   let h=Math.trunc((k+i)/26)+1;
+                   result[i]=tabmin[h];
+                     }
+                tour++;
             }
-            if(j-n >=0){
-                result[i]=tabmin[j-n];
-            }
-            else{
-                let k=26-j;
-                result[i]=tabmin[k];
-            }
+            if(tour===1){
+                while(tab2[i] !=tabmin[j]){
+                    j++
+                   }
+                    if(j+k <=25){
+                       result[i]=tabmin[j+k];
+                    }
+                   else{
+                   let h=Math.trunc((k+i)/26)+1;
+                   result[i]=tabmin[h];
+                     }
+                   tour=tour++;
+               }
+               if(tour===2){
+                while(tab2[i] !=tabmin[j]){
+                    j++
+                   }
+                    if(j+k <=25){
+                       result[i]=tabmin,[j+k];
+                    }
+                   else{
+                   let h=Math.trunc((k+i)/26)+1;
+                   result[i]=tabmin[h];
+                     }
+               tour=0;
+             }
+            }    
         }
-    }
     j=0;
- }
-        let result2=result.join("");
-        return result2;
-    
-    
-}
-
-
-function determineclef(n){
-    if(Math.trunc(n>=10)){
-       return 1+determineclef(Math.trunc((n/10)));
-   }
-   else{
-       return 1;
     }
-}
+     let result2=result.join("");
+        return result2;   
+ }
+       
+    
+    
+
+
+
 
 function decrypte9(s, n){
     
