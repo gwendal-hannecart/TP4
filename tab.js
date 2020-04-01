@@ -47,3 +47,171 @@ function nbOccurences(wordList, word){
     
     return result;
 }
+
+
+function flatten2D(array){
+    var result=[0];
+    let k=0;
+    for(let nb of array){
+        for(let n of nb){
+            result.push(n);
+        }
+    }
+    return result;
+}
+
+function exercice6(array){
+    console.log(array);
+    array.pop();
+    array.push("bonjour");
+    return array;
+}
+
+function exercice7(){
+    let i=0;
+    while(i<9){
+        for(let h=0;h<11;h++){
+             for(let j=0;j<11;j++){
+                    let k=j*h
+                    console.log(j, "*",i,"=", k);
+             }
+        i++
+         }
+    }
+}
+
+function encrypte8(s, n){
+    var tab=["A", "B", "C", "D", "E" ,"F" ,"G" ,"H", "I", "J", "K", "L", "M", "N", "O" ,"P" ,"Q" ,"R", "S" ,"T", "U", "V" ,"W", "X" ,"Y", "Z"]
+    var tabmin=["a", "b", "c", "d", "e" ,"f" ,"g" ,"h", "i", "j", "k", "l", "m", "n", "o" ,"p" ,"q" ,"r", "s" ,"t", "u", "v" ,"w", "x" ,"y", "z"]
+    var result=[0];
+    var tab2=[0];
+    let j=0;
+    for(let i=0;i <s.length;i++){
+        tab2[i]=s[i];;
+    }
+    for(i=0;i<s.length;i++){
+       if(tab2[i]>="A" && tab2[i]<="Z"){ 
+            if(tab2[i]===" "){
+                result[i]=" ";
+            }
+            else{
+                    while(tab2[i] !=tab[j]){
+                     j++
+                    }
+                     if(j+n <=25){
+                        result[i]=tab[j+n];
+                     }
+                    else{
+                    let k=Math.trunc((n+i)/26)+1;
+                    result[i]=tab[k];
+            }
+         }
+    }
+    else{
+        if(tab2[i]===" "){
+            result[i]=" ";
+        }
+        else{
+            while(tab2[i] !=tabmin[j]){
+            j++
+             }
+             if(j+n <=25){
+                    result[i]=tab[j+n];
+            }
+            else{
+                let k=Math.trunc((n+i)/26)+1;
+                 result[i]=tab[k];
+            }
+        }
+    }
+    j=0;
+    }
+    let result2=result.join("");
+    return result2;
+
+}
+
+function decrypte8(s, n){
+    
+        var tab=["A", "B", "C", "D", "E" ,"F" ,"G" ,"H", "I", "J", "K", "L", "M", "N", "O" ,"P" ,"Q" ,"R", "S" ,"T", "U", "V" ,"W", "X" ,"Y", "Z"]
+        var tabmin=["a", "b", "c", "d", "e" ,"f" ,"g" ,"h", "i", "j", "k", "l", "m", "n", "o" ,"p" ,"q" ,"r", "s" ,"t", "u", "v" ,"w", "x" ,"y", "z"]
+        var result=[0];
+        var tab2=[0];
+        let j=0;
+        for(let i=0;i <s.length;i++){
+            tab2[i]=s[i];;
+        }
+       for(i=0;i<s.length;i++){          
+        if(tab2[i]>="A" && tab2[i]<="Z"){ 
+            if(tab2[i]===" "){
+                result[i]=" ";
+            }
+            else{
+                while(tab2[i] !=tab[j]){
+                j++
+                }
+                if(j-n >=0){
+                    result[i]=tab[j-n];
+                }
+                else{
+                    let k=26-j;
+                    result[i]=tab[k];
+           }
+        }
+    }
+    else{
+        if(tab2[i]===" "){
+            result[i]=" ";
+        }
+        else{
+            while(tab2[i] !=tabmin[j]){
+                j++
+            }
+            if(j-n >=0){
+                result[i]=tabmin[j-n];
+            }
+            else{
+                let k=26-j;
+                result[i]=tabmin[k];
+            }
+        }
+    }
+    j=0;
+ }
+        let result2=result.join("");
+        return result2;
+    
+    
+}
+
+function encrypte9(s, n){
+    var tab=["A", "B", "C", "D", "E" ,"F" ,"G" ,"H", "I", "J", "K", "L", "M", "N", "O" ,"P" ,"Q" ,"R", "S" ,"T", "U", "V" ,"W", "X" ,"Y", "Z"]
+    var tabmin=["a", "b", "c", "d", "e" ,"f" ,"g" ,"h", "i", "j", "k", "l", "m", "n", "o" ,"p" ,"q" ,"r", "s" ,"t", "u", "v" ,"w", "x" ,"y", "z"]
+    var result=[0];
+    var tab2=[0];
+    let j=0;
+    let clef=determineclef(n);
+    
+    
+
+}
+function determineclef(n){
+    if(Math.trunc(n>=10)){
+       return 1+determineclef(Math.trunc((n/10)));
+   }
+   else{
+       return 1;
+    }
+}
+
+function decrypte9(s, n){
+    
+        var tab=["A", "B", "C", "D", "E" ,"F" ,"G" ,"H", "I", "J", "K", "L", "M", "N", "O" ,"P" ,"Q" ,"R", "S" ,"T", "U", "V" ,"W", "X" ,"Y", "Z"]
+        var tabmin=["a", "b", "c", "d", "e" ,"f" ,"g" ,"h", "i", "j", "k", "l", "m", "n", "o" ,"p" ,"q" ,"r", "s" ,"t", "u", "v" ,"w", "x" ,"y", "z"]
+        var result=[0];
+        var tab2=[0];
+        let j=0;
+        
+    
+    
+}
