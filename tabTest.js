@@ -13,8 +13,8 @@ function repeatTest(){
     console.log( flatten2D([[1,2], [3,4], [5,6]])); // [1, 2, 3, 4, 5, 6]
     console.log( flatten2D([[1,2], [3,4,5], [6]])); // [1, 2, 3, 4, 5, 6]
     console.log(exercice6( ["lot", "of", "words", "of", "different", "sizes"]) );
-    console.log((encrypte8("bonjour lol",5)));
-   console.log(decrypte8(encrypte8("bonjour lol",5),5))
-    
-    console.log(encrypte9("BONJOUR lol",314))
+   console.log((encrypte8("ATTAQUEZ",3)));
+   console.log(decrypte8(encrypte8("ATTAQUEZ",3),3))
+   //console.log(encrypte9("ATTAQUEZ",314));
+    //console.log(decrypte9(encrypte9("BONJOUR lol",314),314));
 }
