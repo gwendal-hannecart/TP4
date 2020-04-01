@@ -10,4 +10,10 @@ function repeatTest(){
     console.log(nbOccurences(text, "foo")); // => 3
     console.log(nbOccurences(text, "quux")); // => 0
     console.log(nbOccurences(text, "baz")); // => 1
+    console.log( flatten2D([[1,2], [3,4], [5,6]])); // [1, 2, 3, 4, 5, 6]
+    console.log( flatten2D([[1,2], [3,4,5], [6]])); // [1, 2, 3, 4, 5, 6]
+    console.log(exercice6( ["lot", "of", "words", "of", "different", "sizes"]) );
+    console.log((encrypte8("bonjour lol",5)));
+   console.log(decrypte8(encrypte8("bonjour lol",5),5))
+    console.log(determineclef(214));
 }
