@@ -17,5 +17,6 @@ function repeatTest(){
     console.log(decrypte8(encrypte8("ATTAQUEZ",3),3))
     console.log(encrypte9("ATTAQUEZ",314));
     console.log(encrypte9("attaquez",314));
-    console.log(decrypte9(encrypte9("BONJOUR lol",314),314));
+    console.log(decrypte9("DUXDRYHM",314));
+    console.log(decrypte9("duxdryhm",314));
 }
